@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>FacPush App</title>
+
+    <!-- Bootstrap -->
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+  </head>
+  <body>
+    <div class="container">
+	 <!---- Nav Bar------>
+		<div id="menu-navbar">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">Notifications</a></li>
+				<li><a href="#">Settings</a></li>
+			</ul>
+		</div>
+		
+		<!--- Nav List ---->
+	<div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#" onclick="javascript: testParse();return false;"><i class="icon-chevron-right"></i> Dropdowns</a></li>
+          <li><a href="#"><i class="icon-chevron-right"></i> Button groups</a></li>
+          <li><a href="#"><i class="icon-chevron-right"></i> Button dropdowns</a></li>
+          <li><a href="#"><i class="icon-chevron-right"></i> Navs</a></li>
+          <li><a href="#"><i class="icon-chevron-right"></i> Navbar</a></li>
+          <li><a href="#"><i class="icon-chevron-right"></i> Breadcrumbs</a></li>
+        </ul>
+      </div>
+	  
+	  <button id="ajax">ajax call</button>
+
+    </div> <!-- /container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="libs/jquery/jquery-1.11.0.min.js"></script>
+	<script src="js/api-parse.js"></script>
+	<script src="libs/parse/parse-1.2.18.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		var headers = {"X-Parse-Application-Id":"gn23tgrg2J5EYgYJJqUW7tvlqCRRbULZZjuCv1de", "X-Parse-REST-API-Key":"ZblCesxlIR6w5TI6IumInVUJrhLDTB19cC6xsTeF"};
+
+			// Variable to store data:
+			var data = '{ "name": "Kevin", "age": "24" }';
+			$( "#ajax" ).click(function() {
+						$.ajax({
+					 type: "POST",
+					 url: "https://api.parse.com/1/classes/sample",
+					 data: data,
+					 contentType: "application/json; charset=utf-8",
+					 dataType: "json",
+					 headers:headers,
+					 success: function (data, status, jqXHR) {
+						alert('it works');
+					 },
+				 
+					 error: function (jqXHR, status) {            
+						 
+					 }
+
+				 });
+			});
+  </script>
+  </script>
+  </body>
+</html>
