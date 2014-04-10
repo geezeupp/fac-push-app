@@ -17,42 +17,67 @@
 	<script	src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>    
  	</head>
   
- 	<body>
+ 	<body> 	
+ 	
+ 		<div data-role="header" data-position="inline" data-theme="f">
+ 			<h1><strong>FacPUSH</strong></h1>
+			<a id="accueil" data-icon="grid" class="ui-btn-right" data-theme="c">Accueil</a>
+		</div> <!-- header -->
+ 	
 	    <div class="container">
-		<!---- Nav Bar------>
+	    
 			<div id="menu-navbar">
 				<ul class="nav nav-tabs">
 					<li class="active"><a href="#nouvelles" data-toogle="tab">Nouvelles</a></li>
 					<li><a href="#parametres" data-toogle="tab">Parametres</a></li>
 					<li><a href="#liens_utiles" data-toogle="tab">Liens utiles</a></li>
 				</ul>
-			</div>
+			</div> <!-- menu-navbar -->
 			
 			<div class="tab-content">
 				<div class="tab-pane active" id="nouvelles">				
-					<ul data-role="listview" data-inset="true">
-					    <li data-role="list-divider">Jeudi 7 Octobre 2010 <span class="ui-li-count">1</span></li>
+					<ul data-role="listview" id="detail" >
 					    <li>
-					    	<a href="news.html"><h2>AMB</h2>			    	
+					    	<a><h2>AMB</h2>			    	
 					        <p><strong>Gala MIAGE</strong></p>
 					        <p>Bien sûr, planifions la réunion à Cuisine Highland à 8:00 ce soir. Ne peux pas attendre ! </p>
-					        <p class="ui-li-aside"><strong>4:48</strong>PM</p>
+					        <p class="ui-li-aside"><strong>Date</strong> heure</p>
 					        </a>
-					    </li>
-					    
+					    </li>					    
 					    <li>
-					    	<a href="news.html"><h2>InterAsso</h2>			    	
+					    	<a><h2>InterAsso</h2>			    	
 					        <p><strong>Les elections approchent</strong></p>
 					        <p>Destinées à renouveler l’ensemble des conseils municipaux dans les 36 682 communes françaises, les élections municipales sont organisées les dimanches 23 et 30 mars 2014.  </p>
-					        <p class="ui-li-aside"><strong>9:48</strong>AM</p>
+					        <p class="ui-li-aside"><strong>Date</strong> heure</p>
 					        </a>
 					    </li>
 					    
 					</ul>								
-				</div>
-				<div class="tab-pane" id="parametres">Parametres</div>
-				<div class="tab-pane" id="liens_utiles">Liens utiles</div>			
-			</div>
+				</div> <!-- tab-pane nouvelles -->
+				
+				<div class="tab-pane" id="parametres">
+					
+					<h4>Bienvenue sur votre espace de paramétrage, 
+						Inscrivez-vous en cliquant sur les boutons .... </h4>				
+					
+					<p>
+    					<a href="#" data-role="button" id="btn_inscription" data-mini="true" data-inline="true" data-icon="plus" data-theme="c">S'inscrire</a> 
+    					<a href="#" data-role="button" id="btn_désinscription" data-mini="true" data-inline="true" data-icon="minus" data-theme="c">Se désinscrire</a>
+					</p>
+										
+				</div> <!-- tab-pane parametres -->
+				
+				<div class="tab-pane" id="liens_utiles">
+					<h5>Quelques liens</h5><br>		
+					
+					<p><a id="site_amb" rel="external">Site de l'AMB</a></p>
+					<p><a id="site_interasso" rel="external">Site d'InterAsso</a></p>
+					<p><a id="site_jumbo" rel="external">Site de M TEch</a></p>
+					<p><a id="site_mtech" rel="external">Site de la Jumbo</a></p>
+	
+				</div> <!-- tab-pane liens-utiles -->		
+				
+			</div> <!-- tab-content -->
 			
 	    </div> <!-- /container -->	    
 	    
@@ -67,9 +92,37 @@
 	    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
 	    
 	    <script type = "text/javascript">
+	    //Naviguation entre les différents onglets
 	    $('a').click(function (e) {
 	    	e.preventDefault();
 	    	$(this).tab('show');	    	
+	    });
+	    
+	    $(document).ready(function(){   
+	    	$("#detail").click(function () {     
+	    	    document.location.href = "news.html";
+	    	});
+	    	
+	    	$("#accueil").click(function () {     
+	    	    document.location.href = "accueil.html";
+	    	});
+	    	
+	    	$("#site_amb").click(function () {     
+	    	    document.location.href = "http://asso.miagebordeaux.fr";
+	    	});
+	    	
+	    	$("#site_interasso").click(function () {     
+	    	    document.location.href = "https://fr-fr.facebook.com/interassoselanassociatif";
+	    	});
+	    	
+	    	$("#site_jumbo").click(function () {     
+	    	    document.location.href = "http://jumbo.miagebordeaux.fr/‎";
+	    	});
+	    	
+	    	$("#site_mtech").click(function () {     
+	    	    document.location.href = "http://mtech.bdx1.free.fr";
+	    	});
+	    		    	
 	    });
 	    </script>
 	
