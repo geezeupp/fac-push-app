@@ -10,26 +10,108 @@
 
     <!-- Bootstrap -->
     <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">	
- 	</head>
+    
+    <!-- Jquery Mobile -->     
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script	src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>    
+ </head>
   
- 	<body>
+ 	<body> 	
+ 	
+ 		<div data-role="header" data-position="inline" data-theme="f">
+ 			<h1><strong>FacPUSH</strong></h1>
+			<a id="accueil" data-icon="grid" class="ui-btn-right" data-theme="c">Accueil</a>
+		</div> <!-- header -->
+ 	
 	    <div class="container">
-		<!---- Nav Bar------>
+	    
 			<div id="menu-navbar">
 				<ul class="nav nav-tabs">
-					<li><a href="#">Nouvelles</a></li>
-					<li><a href="#">Parametres</a></li>
-					<li><a href="#">Liens utiles</a></li>
+					<li class="active"><a href="#nouvelles" data-toogle="tab">Nouvelles</a></li>
+					<li><a href="#parametres" data-toogle="tab">Parametres</a></li>
+					<li><a href="#liens_utiles" data-toogle="tab">Liens utiles</a></li>
 				</ul>
-			</div>
-	    </div> <!-- /container -->
+			</div> <!-- menu-navbar -->
+			
+			<div class="tab-content">
+				<div class="tab-pane active" id="nouvelles">				
+					<ul data-role="listview" id="detail" >
+					    <li>
+					    	<a><h2>AMB</h2>			    	
+					        <p><strong>Gala MIAGE</strong></p>
+					        <p>Bien sûr, planifions la réunion à Cuisine Highland à 8:00 ce soir. Ne peux pas attendre ! </p>
+					        <p class="ui-li-aside"><strong>Date</strong> heure</p>
+					        </a>
+					    </li>					    
+					    <li>
+					    	<a><h2>InterAsso</h2>			    	
+					        <p><strong>Les elections approchent</strong></p>
+					        <p>Destinées à renouveler l’ensemble des conseils municipaux dans les 36 682 communes françaises, les élections municipales sont organisées les dimanches 23 et 30 mars 2014.  </p>
+					        <p class="ui-li-aside"><strong>Date</strong> heure</p>
+					        </a>
+					    </li>
+					    
+					</ul>								
+				</div> <!-- tab-pane nouvelles -->
+				
+				<div class="tab-pane" id="parametres">
+					
+					<h4>Bienvenue sur votre espace de paramétrage, 
+						Inscrivez-vous en cliquant sur les boutons .... </h4>				
+					
+					<p>
+    					<a href="#" data-role="button" id="btn_inscription" data-mini="true" data-inline="true" data-icon="plus" data-theme="c">S'inscrire</a> 
+    					<a href="#" data-role="button" id="btn_désinscription" data-mini="true" data-inline="true" data-icon="minus" data-theme="c">Se désinscrire</a>
+					</p>
+										
+				</div> <!-- tab-pane parametres -->
+				
+				<div class="tab-pane" id="liens_utiles">
+					<h5>Quelques liens</h5><br>		
+					
+					<p><a id="site_sport" rel="external">Site de sport</a></p>
+				
+	
+				</div> <!-- tab-pane liens-utiles -->		
+				
+			</div> <!-- tab-content -->
+			
+	    </div> <!-- /container -->	    
+	    
 	
 	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	    <script src="libs/jquery/jquery-1.11.0.min.js"></script>
 		<script src="js/api-parse.js"></script>
-		<script src="libs/parse/parse-1.2.18.min.js"></script>
+		<script src="libs/parse/parse-1.2.18.min.js"></script>	
+			
+		
 	    <!-- Include all compiled plugins (below), or include individual files as needed -->
 	    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+	    
+	    <script type = "text/javascript">
+	    //Naviguation entre les différents onglets
+	    $('a').click(function (e) {
+	    	e.preventDefault();
+	    	$(this).tab('show');	    	
+	    });
+	    
+	    $(document).ready(function(){   
+	    	$("#detail").click(function () {     
+	    	    document.location.href = "news.html";
+	    	});
+	    	
+	    	$("#accueil").click(function () {     
+	    	    document.location.href = "accueil.html";
+	    	});
+	    	
+	    	$("#site_sport").click(function () {     
+	    	    document.location.href = "http://www.u-bordeaux1.fr/vie-etudiante/culture-sport-loisirs/activites-sportives.html ";
+	    	});
+	    
+	    		    	
+	    });
+	    </script>
 	
  	</body>
 </html>

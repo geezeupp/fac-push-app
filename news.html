@@ -18,6 +18,10 @@
  	</head>
   
  	<body>
+ 		<div data-role="header" data-position="inline" data-theme="f">
+ 			<h1><strong>FacPUSH</strong></h1>
+			<a id="retour" data-icon="back" data-theme="c">Retour</a>
+		</div>
 	    <div class="container">
 	    
 	    	<div class="panel panel-primary">
@@ -47,6 +51,16 @@
 		
 	    <!-- Include all compiled plugins (below), or include individual files as needed -->
 	    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+	    
+	    <script type = "text/javascript">
+	    //gestion du boutton retour
+    
+	    $(document).ready(function(){   
+	    	$("#retour").click(function () {     
+	    	    document.location.href = "associations.html";
+	    	});
+	    });
+	    </script>
 	
  	</body>
 </html>
