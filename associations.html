@@ -68,12 +68,14 @@
 				</div> <!-- tab-pane parametres -->
 				
 				<div class="tab-pane" id="liens_utiles">
-					<h5>Quelques liens</h5><br>		
+					<h5>Quelques liens</h5>	
 					
-					<p><a id="site_amb" rel="external">Site de l'AMB</a></p>
-					<p><a id="site_interasso" rel="external">Site d'InterAsso</a></p>
-					<p><a id="site_jumbo" rel="external">Site de M TEch</a></p>
-					<p><a id="site_mtech" rel="external">Site de la Jumbo</a></p>
+					<ul data-role="listview">
+					    <li><a id="site_amb">Site de l'AMB</a></li>
+					    <li><a id="site_interasso">Site d'InterAsso</a></li>
+					    <li><a id="site_mtech">Site de M TEch</a></li>
+					    <li><a id="site_jumbo">Site de la Jumbo</a></li>
+					</ul>
 	
 				</div> <!-- tab-pane liens-utiles -->		
 				
@@ -114,15 +116,14 @@
 	    	$("#site_interasso").click(function () {     
 	    	    document.location.href = "https://fr-fr.facebook.com/interassoselanassociatif";
 	    	});
-	    	
-	    	$("#site_jumbo").click(function () {     
-	    	    document.location.href = "http://jumbo.miagebordeaux.fr/‎";
-	    	});
-	    	
+	    		    	
 	    	$("#site_mtech").click(function () {     
 	    	    document.location.href = "http://mtech.bdx1.free.fr";
 	    	});
-	    		    	
+
+	    	$("#site_jumbo").click(function () {     
+	    	    document.location.href = "http://jumbo.miagebordeaux.fr";
+	    	});	    		    	
 	    });
 	    </script>
 	
