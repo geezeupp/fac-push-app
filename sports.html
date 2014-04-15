@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Associations</title>
+    <title>Sports</title>
 
     <!-- Bootstrap -->
     <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">	
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script	src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>    
- 	</head>
+ </head>
   
  	<body> 	
  	
@@ -28,7 +28,7 @@
 	    
 			<div id="menu-navbar">
 				<ul class="nav nav-tabs">
-					<li class="active"><a href="#nouvelles" data-toogle="tab">Nouvelles</a></li>
+					<li class="active"><a href="#nouvelles" data-toogle="tab">News</a></li>
 					<li><a href="#parametres" data-toogle="tab">Parametres</a></li>
 					<li><a href="#liens_utiles" data-toogle="tab">Liens utiles</a></li>
 				</ul>
@@ -38,20 +38,12 @@
 				<div class="tab-pane active" id="nouvelles">				
 					<ul data-role="listview" id="detail" >
 					    <li>
-					    	<a><h2>RU 1</h2>			    	
-					        <p><strong>Menu du jour</strong></p>
-					        <p>pizza chevre fromage .... </p>
+					    	<a><h2>FOOT Miage</h2>			    	
+					        <p><strong>Résultat Miage Bordeaux - Miage Toulouse</strong></p>
+					        <p>L'équipe de foot de la Miage de bordeaux a écrasée celle de la Miage de Toulouse 4-0 ....  </p>
 					        <p class="ui-li-aside"><strong>Date</strong> heure</p>
 					        </a>
-					    </li>					    
-					    <li>
-					    	<a><h2>RU 2 </h2>			    	
-					        <p><strong>Menu du jour</strong></p>
-					        <p>Ratatouille + je ne sais pas quoi ... </p>
-					        <p class="ui-li-aside"><strong>Date</strong> heure</p>
-					        </a>
-					    </li>
-					    
+					    </li>					    					    
 					</ul>								
 				</div> <!-- tab-pane nouvelles -->
 				
@@ -71,9 +63,10 @@
 					<h5>Quelques liens</h5>	
 
 					<ul data-role="listview">
-					    <li><a id="site_ru">Site des restaurants universitaires</a></li>
+					    <li><a id="site_sport">Site de sport</a></li>
 					</ul>
-
+				
+	
 				</div> <!-- tab-pane liens-utiles -->		
 				
 			</div> <!-- tab-content -->
@@ -103,12 +96,13 @@
 	    	});
 	    	
 	    	$("#accueil").click(function () {     
-	    	    document.location.href = "accueil.html";
+	    	    document.location.href = "index.html";
 	    	});
 	    	
-	    	$("#site_ru").click(function () {     
-	    	    document.location.href = "https://www.u-bordeaux.fr/Vie-des-campus/Vie-pratique/Restauration2";
-	    	});   	
+	    	$("#site_sport").click(function () {     
+	    	    document.location.href = "http://www.u-bordeaux1.fr/vie-etudiante/culture-sport-loisirs/activites-sportives.html ";
+	    	});
+	    
 	    		    	
 	    });
 	    </script>

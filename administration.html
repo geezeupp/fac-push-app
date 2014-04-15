@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script	src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>    
- </head>
+ 	</head>
   
  	<body> 	
  	
@@ -28,7 +28,7 @@
 	    
 			<div id="menu-navbar">
 				<ul class="nav nav-tabs">
-					<li class="active"><a href="#nouvelles" data-toogle="tab">Nouvelles</a></li>
+					<li class="active"><a href="#nouvelles" data-toogle="tab">News</a></li>
 					<li><a href="#parametres" data-toogle="tab">Parametres</a></li>
 					<li><a href="#liens_utiles" data-toogle="tab">Liens utiles</a></li>
 				</ul>
@@ -38,16 +38,16 @@
 				<div class="tab-pane active" id="nouvelles">				
 					<ul data-role="listview" id="detail" >
 					    <li>
-					    	<a><h2>AMB</h2>			    	
-					        <p><strong>Gala MIAGE</strong></p>
-					        <p>Bien sûr, planifions la réunion à Cuisine Highland à 8:00 ce soir. Ne peux pas attendre ! </p>
+					    	<a><h2>Labri</h2>			    	
+					        <p><strong>Changement de salle</strong></p>
+					        <p>Votre TD d'Approche est annulé ... </p>
 					        <p class="ui-li-aside"><strong>Date</strong> heure</p>
 					        </a>
 					    </li>					    
 					    <li>
-					    	<a><h2>InterAsso</h2>			    	
-					        <p><strong>Les elections approchent</strong></p>
-					        <p>Destinées à renouveler l’ensemble des conseils municipaux dans les 36 682 communes françaises, les élections municipales sont organisées les dimanches 23 et 30 mars 2014.  </p>
+					    	<a><h2>Secrétariat </h2>			    	
+					        <p><strong>Inscription administrative</strong></p>
+					        <p>Merci aux étudiants pas encore inscrit de le faire impérativement avant le ...  </p>
 					        <p class="ui-li-aside"><strong>Date</strong> heure</p>
 					        </a>
 					    </li>
@@ -71,12 +71,10 @@
 					<h5>Quelques liens</h5>	
 					
 					<ul data-role="listview">
-					    <li><a id="site_amb">Site de l'AMB</a></li>
-					    <li><a id="site_interasso">Site d'InterAsso</a></li>
-					    <li><a id="site_mtech">Site de M TEch</a></li>
-					    <li><a id="site_jumbo">Site de la Jumbo</a></li>
+					    <li><a id="site_brdx">Site de l'université de bordeaux</a></li>
+					    <li><a id="site_ent">ENT</a></li>
 					</ul>
-	
+
 				</div> <!-- tab-pane liens-utiles -->		
 				
 			</div> <!-- tab-content -->
@@ -106,24 +104,17 @@
 	    	});
 	    	
 	    	$("#accueil").click(function () {     
-	    	    document.location.href = "accueil.html";
+	    	    document.location.href = "index.html";
 	    	});
 	    	
-	    	$("#site_amb").click(function () {     
-	    	    document.location.href = "http://asso.miagebordeaux.fr";
+	    	$("#site_brdx").click(function () {     
+	    	    document.location.href = "http://www.u-bordeaux1.fr/";
 	    	});
 	    	
-	    	$("#site_interasso").click(function () {     
-	    	    document.location.href = "https://fr-fr.facebook.com/interassoselanassociatif";
-	    	});
+	    	$("#site_ent").click(function () {     
+	    	    document.location.href = "http://www.u-bordeaux.fr/Vie-des-campus/Services-numeriques/Identifiants-ENT";
+	    	});	    	
 	    		    	
-	    	$("#site_mtech").click(function () {     
-	    	    document.location.href = "http://mtech.bdx1.free.fr";
-	    	});
-
-	    	$("#site_jumbo").click(function () {     
-	    	    document.location.href = "http://jumbo.miagebordeaux.fr";
-	    	});	    		    	
 	    });
 	    </script>
 	

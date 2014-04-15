@@ -28,7 +28,7 @@
 	    
 			<div id="menu-navbar">
 				<ul class="nav nav-tabs">
-					<li class="active"><a href="#nouvelles" data-toogle="tab">Nouvelles</a></li>
+					<li class="active"><a href="#nouvelles" data-toogle="tab">News</a></li>
 					<li><a href="#parametres" data-toogle="tab">Parametres</a></li>
 					<li><a href="#liens_utiles" data-toogle="tab">Liens utiles</a></li>
 				</ul>
@@ -38,16 +38,16 @@
 				<div class="tab-pane active" id="nouvelles">				
 					<ul data-role="listview" id="detail" >
 					    <li>
-					    	<a><h2>Labri</h2>			    	
-					        <p><strong>Changement de salle</strong></p>
-					        <p>Votre TD d'Approche est annulé ... </p>
+					    	<a><h2>RU 1</h2>			    	
+					        <p><strong>Menu du jour</strong></p>
+					        <p>pizza chevre fromage .... </p>
 					        <p class="ui-li-aside"><strong>Date</strong> heure</p>
 					        </a>
 					    </li>					    
 					    <li>
-					    	<a><h2>Secrétariat </h2>			    	
-					        <p><strong>Inscription administrative</strong></p>
-					        <p>Merci aux étudiants pas encore inscrit de le faire impérativement avant le ...  </p>
+					    	<a><h2>RU 2 </h2>			    	
+					        <p><strong>Menu du jour</strong></p>
+					        <p>Ratatouille + je ne sais pas quoi ... </p>
 					        <p class="ui-li-aside"><strong>Date</strong> heure</p>
 					        </a>
 					    </li>
@@ -69,10 +69,9 @@
 				
 				<div class="tab-pane" id="liens_utiles">
 					<h5>Quelques liens</h5>	
-					
+
 					<ul data-role="listview">
-					    <li><a id="site_brdx">Site de l'université de bordeaux</a></li>
-					    <li><a id="site_ent">ENT</a></li>
+					    <li><a id="site_ru">Site des restaurants universitaires</a></li>
 					</ul>
 
 				</div> <!-- tab-pane liens-utiles -->		
@@ -104,16 +103,12 @@
 	    	});
 	    	
 	    	$("#accueil").click(function () {     
-	    	    document.location.href = "accueil.html";
+	    	    document.location.href = "index.html";
 	    	});
 	    	
-	    	$("#site_brdx").click(function () {     
-	    	    document.location.href = "http://www.u-bordeaux1.fr/";
-	    	});
-	    	
-	    	$("#site_ent").click(function () {     
-	    	    document.location.href = "http://www.u-bordeaux.fr/Vie-des-campus/Services-numeriques/Identifiants-ENT";
-	    	});	    	
+	    	$("#site_ru").click(function () {     
+	    	    document.location.href = "https://www.u-bordeaux.fr/Vie-des-campus/Vie-pratique/Restauration2";
+	    	});   	
 	    		    	
 	    });
 	    </script>

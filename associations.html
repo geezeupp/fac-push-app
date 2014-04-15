@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Sports</title>
+    <title>Associations</title>
 
     <!-- Bootstrap -->
     <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">	
@@ -28,7 +28,7 @@
 	    
 			<div id="menu-navbar">
 				<ul class="nav nav-tabs">
-					<li class="active"><a href="#nouvelles" data-toogle="tab">Nouvelles</a></li>
+					<li class="active"><a href="#nouvelles" data-toogle="tab">News</a></li>
 					<li><a href="#parametres" data-toogle="tab">Parametres</a></li>
 					<li><a href="#liens_utiles" data-toogle="tab">Liens utiles</a></li>
 				</ul>
@@ -38,12 +38,20 @@
 				<div class="tab-pane active" id="nouvelles">				
 					<ul data-role="listview" id="detail" >
 					    <li>
-					    	<a><h2>FOOT Miage</h2>			    	
-					        <p><strong>Résultat Miage Bordeaux - Miage Toulouse</strong></p>
-					        <p>L'équipe de foot de la Miage de bordeaux a écrasée celle de la Miage de Toulouse 4-0 ....  </p>
+					    	<a><h2>AMB</h2>			    	
+					        <p><strong>Gala MIAGE</strong></p>
+					        <p>Bien sûr, planifions la réunion à Cuisine Highland à 8:00 ce soir. Ne peux pas attendre ! </p>
 					        <p class="ui-li-aside"><strong>Date</strong> heure</p>
 					        </a>
-					    </li>					    					    
+					    </li>					    
+					    <li>
+					    	<a><h2>InterAsso</h2>			    	
+					        <p><strong>Les elections approchent</strong></p>
+					        <p>Destinées à renouveler l’ensemble des conseils municipaux dans les 36 682 communes françaises, les élections municipales sont organisées les dimanches 23 et 30 mars 2014.  </p>
+					        <p class="ui-li-aside"><strong>Date</strong> heure</p>
+					        </a>
+					    </li>
+					    
 					</ul>								
 				</div> <!-- tab-pane nouvelles -->
 				
@@ -61,11 +69,13 @@
 				
 				<div class="tab-pane" id="liens_utiles">
 					<h5>Quelques liens</h5>	
-
+					
 					<ul data-role="listview">
-					    <li><a id="site_sport">Site de sport</a></li>
+					    <li><a id="site_amb">Site de l'AMB</a></li>
+					    <li><a id="site_interasso">Site d'InterAsso</a></li>
+					    <li><a id="site_mtech">Site de M TEch</a></li>
+					    <li><a id="site_jumbo">Site de la Jumbo</a></li>
 					</ul>
-				
 	
 				</div> <!-- tab-pane liens-utiles -->		
 				
@@ -96,14 +106,24 @@
 	    	});
 	    	
 	    	$("#accueil").click(function () {     
-	    	    document.location.href = "accueil.html";
+	    	    document.location.href = "index.html";
 	    	});
 	    	
-	    	$("#site_sport").click(function () {     
-	    	    document.location.href = "http://www.u-bordeaux1.fr/vie-etudiante/culture-sport-loisirs/activites-sportives.html ";
+	    	$("#site_amb").click(function () {     
+	    	    document.location.href = "http://asso.miagebordeaux.fr";
 	    	});
-	    
+	    	
+	    	$("#site_interasso").click(function () {     
+	    	    document.location.href = "https://fr-fr.facebook.com/interassoselanassociatif";
+	    	});
 	    		    	
+	    	$("#site_mtech").click(function () {     
+	    	    document.location.href = "http://mtech.bdx1.free.fr";
+	    	});
+
+	    	$("#site_jumbo").click(function () {     
+	    	    document.location.href = "http://jumbo.miagebordeaux.fr";
+	    	});	    		    	
 	    });
 	    </script>
 	
