@@ -46,30 +46,6 @@
 	<script src="libs/parse/parse-1.2.18.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="libs/bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript">
-		var headers = {"X-Parse-Application-Id":"gn23tgrg2J5EYgYJJqUW7tvlqCRRbULZZjuCv1de", "X-Parse-REST-API-Key":"ZblCesxlIR6w5TI6IumInVUJrhLDTB19cC6xsTeF"};
-
-			// Variable to store data:
-			var data = '{ "name": "Kevin", "age": "24" }';
-			$( "#ajax" ).click(function() {
-						$.ajax({
-					 type: "POST",
-					 url: "https://api.parse.com/1/classes/sample",
-					 data: data,
-					 contentType: "application/json; charset=utf-8",
-					 dataType: "json",
-					 headers:headers,
-					 success: function (data, status, jqXHR) {
-						alert('it works');
-					 },
-				 
-					 error: function (jqXHR, status) {            
-						 
-					 }
-
-				 });
-			});
-  </script>
   </script>
   </body>
 </html>
