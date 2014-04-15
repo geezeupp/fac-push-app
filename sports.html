@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Sports</title>
+
+    <!-- Bootstrap -->
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">	
+    
+    <!-- Jquery Mobile -->     
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script	src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>    
+ </head>
+  
+ 	<body> 	
+ 	
+ 		<div data-role="header" data-position="inline" data-theme="f">
+ 			<h1><strong>FacPUSH</strong></h1>
+			<a id="accueil" data-icon="grid" class="ui-btn-right" data-theme="c">Accueil</a>
+		</div> <!-- header -->
+ 	
+	    <div class="container">
+	    
+			<div id="menu-navbar">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#nouvelles" data-toogle="tab">Nouvelles</a></li>
+					<li><a href="#parametres" data-toogle="tab">Parametres</a></li>
+					<li><a href="#liens_utiles" data-toogle="tab">Liens utiles</a></li>
+				</ul>
+			</div> <!-- menu-navbar -->
+			
+			<div class="tab-content">
+				<div class="tab-pane active" id="nouvelles">				
+					<ul data-role="listview" id="detail" >
+					    <li>
+					    	<a><h2>FOOT Miage</h2>			    	
+					        <p><strong>Résultat Miage Bordeaux - Miage Toulouse</strong></p>
+					        <p>L'équipe de foot de la Miage de bordeaux a écrasée celle de la Miage de Toulouse 4-0 ....  </p>
+					        <p class="ui-li-aside"><strong>Date</strong> heure</p>
+					        </a>
+					    </li>					    					    
+					</ul>								
+				</div> <!-- tab-pane nouvelles -->
+				
+				<div class="tab-pane" id="parametres">
+					
+					<h4>Bienvenue sur votre espace de paramétrage, 
+						Inscrivez-vous en cliquant sur les boutons .... </h4>				
+					
+					<p>
+    					<a href="#" data-role="button" id="btn_inscription" data-mini="true" data-inline="true" data-icon="plus" data-theme="c">S'inscrire</a> 
+    					<a href="#" data-role="button" id="btn_désinscription" data-mini="true" data-inline="true" data-icon="minus" data-theme="c">Se désinscrire</a>
+					</p>
+										
+				</div> <!-- tab-pane parametres -->
+				
+				<div class="tab-pane" id="liens_utiles">
+					<h5>Quelques liens</h5>	
+
+					<ul data-role="listview">
+					    <li><a id="site_sport">Site de sport</a></li>
+					</ul>
+				
+	
+				</div> <!-- tab-pane liens-utiles -->		
+				
+			</div> <!-- tab-content -->
+			
+	    </div> <!-- /container -->	    
+	    
+	
+	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="libs/jquery/jquery-1.11.0.min.js"></script>
+		<script src="js/api-parse.js"></script>
+		<script src="libs/parse/parse-1.2.18.min.js"></script>	
+			
+		
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+	    
+	    <script type = "text/javascript">
+	    //Naviguation entre les différents onglets
+	    $('a').click(function (e) {
+	    	e.preventDefault();
+	    	$(this).tab('show');	    	
+	    });
+	    
+	    $(document).ready(function(){   
+	    	$("#detail").click(function () {     
+	    	    document.location.href = "news.html";
+	    	});
+	    	
+	    	$("#accueil").click(function () {     
+	    	    document.location.href = "accueil.html";
+	    	});
+	    	
+	    	$("#site_sport").click(function () {     
+	    	    document.location.href = "http://www.u-bordeaux1.fr/vie-etudiante/culture-sport-loisirs/activites-sportives.html ";
+	    	});
+	    
+	    		    	
+	    });
+	    </script>
+	
+ 	</body>
+</html>

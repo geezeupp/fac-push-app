@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Mentions légales</title>
+
+    <!-- Bootstrap -->
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">	
+    
+    <!-- Jquery Mobile -->     
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script	src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>    
+ 	</head>
+  
+ 	<body>
+ 		<div data-role="header" data-position="inline" data-theme="f">
+ 			<h1><strong>FacPUSH</strong></h1>
+			<a id="retour" data-icon="back" data-theme="c">Retour</a>
+		</div>
+	    <div class="container">
+	    
+		<div class="panel panel-default">
+		  <div class="panel-heading">Mentions légales</div>
+		  
+		  <div class="panel-body">
+		  
+		    Conformément aux dispositions de l’article 6 III-1 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique, le présent site est la propriété de :
+			
+			Mafac
+			<br>
+			Etudiant de Master 2 Miage Bordeaux
+			<br><br>
+			Propriété intellectuelle
+			<br>
+			Les présentations graphiques faites sur le site sont la propriété intellectuelle de Mafac. La reproduction de tout ou partie de ce site est interdite sauf accord écrit de Mafac.
+			<br><br>
+			Liens hypertextes
+			<br>
+			Les liens établis vers d'autres sites internet extérieurs ne préjugent pas de leur contenu et Mafac ne pourrait être tenue pour responsable des préjudices directs ou indirects qui pourraient résulter de l'accès à ces sites internet de de leur utilisation.
+			<br>
+			Loi informatique et libertés.
+			<br><br>
+			Ce site a été régulièrement déclaré auprès de la Commission Nationale de l'informatique et des Libertés. Conformément aux dispositions de la Loi Informatique et libertés du 6 janvier 1978 et aux fins de vous préserver d'une utilisation de données personnelles non conformes à vos souhaits, nous vous indiquons que vous bénéficiez d'un droit d'accès aux informations vous concernant, d'un droit de modification de celles-ci et d'un droit d'opposition à leur utilisation.
+		  
+		  </div>
+		  
+		</div>		
+			
+	    </div> <!-- /container -->	    
+	    	
+	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="libs/jquery/jquery-1.11.0.min.js"></script>
+		<script src="js/api-parse.js"></script>
+		<script src="libs/parse/parse-1.2.18.min.js"></script>	
+					
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+	    
+	    <script type = "text/javascript">
+	    //gestion du boutton retour
+    
+	    $(document).ready(function(){   
+	    	$("#retour").click(function () {
+	    		//retour vers la rubrique d'où l'on vient
+	    	    document.location.href = "javascript:history.go(-1)";
+	    	});
+	    });
+	    </script>
+	
+ 	</body>
+</html>
