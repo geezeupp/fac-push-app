@@ -13,6 +13,17 @@
 	
 	<!-- Bootstrap -->
     <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="libs/jquery/jquery-1.11.0.min.js"></script>
+	<script src="js/api-parse.js"></script>
+	<script src="libs/parse/parse-1.2.18.min.js"></script>	
+		
+	
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/api-parse.js"></script>
+    <script src="js/utils.js"></script>
 </head> 
 <body> 
 
@@ -21,15 +32,15 @@
 		<br><br>
 		<div data-role="content">	
 			<center>
-				<a class = "btn btn-default" href = "associations.html"><img src="Images/associations.png" height=65px width=65px/></a>
-				<a class = "btn btn-default" href = "sports.html"><img src="Images/sports.png" height=65px width=65px/></a>
+				<a class = "btn btn-default" onclick="return getLink('associations.html','uid')"><img src="images/associations.png" height=65px width=65px/></a>
+				<a class = "btn btn-default"onclick="return getLink('sports.html','uid')"><img src="images/sports.png" height=65px width=65px/></a>
 				<br><br>
-				<a class = "btn btn-default" href = "ru.html"><img src="Images/logoRU.png" height=65px width=65px/></a>
-				<a class = "btn btn-default" href = "administration.html"><img src="Images/administration.png" height=65px width=65px/></a>
+				<a class = "btn btn-default" onclick="return getLink('ru.html','uid')"><img src="images/logoRU.png" height=65px width=65px/></a>
+				<a class = "btn btn-default" onclick="return getLink('administration.html','uid')"><img src="images/administration.png" height=65px width=65px/></a>
 			</center>	
 		</div><!-- /content -->
 		<br><br>	
-
+	
 	
 	</div><!-- container -->
 	
@@ -40,28 +51,6 @@
 	  </div><!-- list-group -->
 	</div><!-- footer -->	
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="libs/jquery/jquery-1.11.0.min.js"></script>
-	<script src="js/api-parse.js"></script>
-	<script src="libs/parse/parse-1.2.18.min.js"></script>	
-		
 	
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
-    
-    <script type = "text/javascript">
-	    
-	    $(document).ready(function(){   
-	    	$("#mentions_legales").click(function () {     
-	    	    document.location.href = "mentions_legales.html";
-	    	});
-	    	
-	    	$("#a_propos").click(function () {     
-	    	    document.location.href = "a_propos.html";
-	    	});
-	    	   	
-	    });
-	    </script>
-
 </body>
 </html>

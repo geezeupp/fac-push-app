@@ -14,7 +14,18 @@
     <!-- Jquery Mobile -->     
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-	<script	src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>    
+	<script	src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script> 
+	 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="libs/jquery/jquery-1.11.0.min.js"></script>
+	<script src="js/api-parse.js"></script>
+	<script src="libs/parse/parse-1.2.18.min.js"></script>	
+		
+	
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/api-parse.js"></script>
+       
  </head>
   
  	<body> 	
@@ -81,52 +92,8 @@
 				</div> <!-- tab-pane liens-utiles -->		
 				
 			</div> <!-- tab-content -->
+			<input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
 			
 	    </div> <!-- /container -->	    
-	    
-	
-	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	    <script src="libs/jquery/jquery-1.11.0.min.js"></script>
-		<script src="js/api-parse.js"></script>
-		<script src="libs/parse/parse-1.2.18.min.js"></script>	
-			
-		
-	    <!-- Include all compiled plugins (below), or include individual files as needed -->
-	    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
-	    
-	    <script type = "text/javascript">
-	    //Naviguation entre les différents onglets
-	    $('a').click(function (e) {
-	    	e.preventDefault();
-	    	$(this).tab('show');	    	
-	    });
-	    
-	    $(document).ready(function(){   
-	    	$("#detail").click(function () {     
-	    	    document.location.href = "news.html";
-	    	});
-	    	
-	    	$("#accueil").click(function () {     
-	    	    document.location.href = "index.html";
-	    	});
-	    	
-	    	$("#site_amb").click(function () {     
-	    	    document.location.href = "http://asso.miagebordeaux.fr";
-	    	});
-	    	
-	    	$("#site_interasso").click(function () {     
-	    	    document.location.href = "https://fr-fr.facebook.com/interassoselanassociatif";
-	    	});
-	    		    	
-	    	$("#site_mtech").click(function () {     
-	    	    document.location.href = "http://mtech.bdx1.free.fr";
-	    	});
-
-	    	$("#site_jumbo").click(function () {     
-	    	    document.location.href = "http://jumbo.miagebordeaux.fr";
-	    	});	    		    	
-	    });
-	    </script>
-	
  	</body>
 </html>
