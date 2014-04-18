@@ -4,6 +4,6 @@
 	width: 100%;
 }
 
-#entete{
-	text-align: center;
+div#entete{
+	margin-top: 15px;
 }

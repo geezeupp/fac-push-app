@@ -119,16 +119,16 @@ function buildCorrectButton(data,channel){
 	var txt = '';
 	switch (channel) {
 	case "Associations":
-		txt = '<h4>Inscrivez-vous à la rubrique "Association" pour recevoir des notifications associées aux animations associatives de l université de Bordeaux.Pour cela, il suffit d appuyer sur le bouton "S inscrire". </h4>';
+		txt = '<h4>Inscrivez-vous \340 la rubrique "Association" pour recevoir des notifications associ\351es aux animations associatives de l universit\351 de Bordeaux.Pour cela, il suffit d appuyer sur le bouton "inscription". </h4>';
 		break;
 	case "Sport":
-		txt = '<h4>Inscrivez-vous à la rubrique "Sport" pour recevoir des notifications associées aux activités sportives de l université de Bordeaux.Pour cela, il suffit d appuyer sur le bouton "S inscrire". </h4>';
+		txt = '<h4>Inscrivez-vous \340 la rubrique "Sport" pour recevoir des notifications associ\351es aux activit\351s sportives de l universit\351 de Bordeaux.Pour cela, il suffit d appuyer sur le bouton "inscription". </h4>';
 		break;
 	case "RU":
-		txt = '<h4>Inscrivez-vous à la rubrique "Restaurant Universitaire" pour recevoir des notifications associées aux menus proposés par les "resto U" et cafétariats de l université de Bordeaux.Pour cela, il suffit d appuyer sur le bouton "S inscrire". </h4>';
+		txt = '<h4>Inscrivez-vous \340 la rubrique "Restaurant Universitaire" pour recevoir des notifications associ\351es aux menus propos\351s par les "resto U" et caf\351tariats de l universit\351 de Bordeaux.Pour cela, il suffit d appuyer sur le bouton "inscription". </h4>';
 		break;
 	case "Administration":
-		txt = '<h4>Inscrivez-vous à la rubrique "Administration" pour recevoir des notifications associées au domaine administratif (emploi du temps, résultats examens) de l université de Bordeaux.Pour cela, il suffit d appuyer sur le bouton "S inscrire". </h4>';
+		txt = '<h4>Inscrivez-vous \340 la rubrique "Administration" pour recevoir des notifications associ\351es au domaine administratif (emploi du temps, résultats examens) de l universit\351 de Bordeaux.Pour cela, il suffit d appuyer sur le bouton "inscription". </h4>';
 		break;
 	}
 	if(data.channels != undefined){
@@ -140,16 +140,16 @@ function buildCorrectButton(data,channel){
 		    	
 		    	switch (channel) {
 		    	case "Associations":
-		    		txt = '<h4>Vous avez la possibilité de vous désinscrire de la rubrique "Association" en appuyant sur le bouton "Se désinscrire".</h4>';
+		    		txt = '<h4>Vous avez la possibilit\351 de vous d\351sinscrire de la rubrique "Association" en appuyant sur le bouton "desinscription ".</h4>';
 		    		break;
 		    	case "Sport":
-		    		txt = '<h4>Vous avez la possibilité de vous désinscrire de la rubrique "Sport" en appuyant sur le bouton "Se désinscrire".</h4>';
+		    		txt = '<h4>Vous avez la possibilit\351 de vous d\351sinscrire de la rubrique "Sport" en appuyant sur le bouton "desinscription".</h4>';
 		    		break;
 		    	case "RU":
-		    		txt = '<h4>Vous avez la possibilité de vous désinscrire de la rubrique "Restaurant Universitaire" en appuyant sur le bouton "Se désinscrire".</h4>';
+		    		txt = '<h4>Vous avez la possibilit\351 de vous d\351sinscrire de la rubrique "Restaurant Universitaire" en appuyant sur le bouton "desinscription".</h4>';
 		    		break;
 		    	case "Administration":
-		    		txt = '<h4>Vous avez la possibilité de vous désinscrire de la rubrique "Administration" en appuyant sur le bouton "Se désinscrire".</h4>';
+		    		txt = '<h4>Vous avez la possibilit\351 de vous d\351sinscrire de la rubrique "Administration" en appuyant sur le bouton "desinscription".</h4>';
 		    		break;
 		    	}
 		    	
