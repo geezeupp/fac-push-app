@@ -6,26 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Associations</title>
-
-    <!-- Bootstrap -->
+    <title>Restaurant Universitaire</title>
+   <!-- Bootstrap -->
     <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">	
-    
-    <!-- Jquery Mobile -->     
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+    <!-- Jquery Mobile -->     
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-	<script	src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
-	 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="libs/jquery/jquery-1.11.0.min.js"></script>
-	<script src="js/api-parse.js"></script>
-	<script src="libs/parse/parse-1.2.18.min.js"></script>	
-		
+    <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+    <script src="libs/jquery/jquery-1.11.0.min.js"></script>   
+    
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
 	
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/api-parse.js"></script>
-    <script src="js/utils.js"></script>    
- 	</head>
+     <script src="js/utils.js"></script> 
+     <script src="js/api-parse.js"></script> 
+     <script type="text/javascript">
+     
+   	 getAllNotificationsForChannel('RU');
+     subscribeOrUnsubscribeFromChannel(getParameterValue('uid'),'RU');
+    </script> 
+ </head>
   
  	<body> 	
  	
@@ -46,34 +46,17 @@
 			
 			<div class="tab-content">
 				<div class="tab-pane active" id="nouvelles">				
-					<ul data-role="listview" id="detail" >
-					    <li>
-					    	<a><h2>RU 1</h2>			    	
-					        <p><strong>Menu du jour</strong></p>
-					        <p>pizza chevre fromage .... </p>
-					        <p class="ui-li-aside"><strong>Date</strong> heure</p>
-					        </a>
-					    </li>					    
-					    <li>
-					    	<a><h2>RU 2 </h2>			    	
-					        <p><strong>Menu du jour</strong></p>
-					        <p>Ratatouille + je ne sais pas quoi ... </p>
-					        <p class="ui-li-aside"><strong>Date</strong> heure</p>
-					        </a>
-					    </li>
-					    
-					</ul>								
+					<div class="list-group"  id="list-push" ></div>								
 				</div> <!-- tab-pane nouvelles -->
 				
 				<div class="tab-pane" id="parametres">
 					
 					<h4>Bienvenue sur votre espace de paramétrage, 
 						Inscrivez-vous en cliquant sur les boutons .... </h4>				
+					<div id="btn-parametre">
+						
+					</div>
 					
-					<p>
-    					<a href="#" data-role="button" id="btn_inscription" data-mini="true" data-inline="true" data-icon="plus" data-theme="c">S'inscrire</a> 
-    					<a href="#" data-role="button" id="btn_désinscription" data-mini="true" data-inline="true" data-icon="minus" data-theme="c">Se désinscrire</a>
-					</p>
 										
 				</div> <!-- tab-pane parametres -->
 				
