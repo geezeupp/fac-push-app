@@ -9,8 +9,12 @@
     <title>Administration</title>
    <!-- Bootstrap -->
     <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">	
+    
+    <!-- Notre CSS -->
+	<link href="css/empty.css" rel="stylesheet">
+	
+	<!-- Jquery Mobile -->  
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
-    <!-- Jquery Mobile -->     
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
     <script src="libs/jquery/jquery-1.11.0.min.js"></script>   
@@ -29,9 +33,8 @@
   
  	<body> 	
  	
- 		<div data-role="header" data-position="inline" data-theme="f">
- 			<h1><strong>FacPUSH</strong></h1>
-			<a id="accueil" data-icon="grid" class="ui-btn-right" data-theme="c">Accueil</a>
+ 		<div data-role="header" data-position="inline" data-theme="f" id="entete"> 			
+			<img src="Images/administration.png" height=45px width=45px/>
 		</div> <!-- header -->
  	
 	    <div class="container">
@@ -50,9 +53,12 @@
 				</div> <!-- tab-pane nouvelles -->
 				
 				<div class="tab-pane" id="parametres">
-					
-					<h4>Bienvenue sur votre espace de paramétrage, 
-						Inscrivez-vous en cliquant sur les boutons .... </h4>				
+					<br>
+					<h4>Bienvenue sur l'espace de paramétrage</h4>
+					<br><br>
+					<div id="txt-parametre">
+						
+					</div>				
 					<div id="btn-parametre">
 						
 					</div>
@@ -62,12 +68,10 @@
 				
 				<div class="tab-pane" id="liens_utiles">
 					<br>
-					<h4>Quelques liens</h4>	
-					
-					<ul data-role="listview">
-					    <li><a id="site_brdx">Site de l'université de bordeaux</a></li>
-					    <li><a id="site_ent">ENT</a></li>
-					</ul>
+					<div class="list-group">						
+					   	<a id="site_brdx" class="list-group-item">Université de bordeaux</a>
+					   	<a id="site_ent" class="list-group-item">ENT</a>					   						   	
+					</div><!-- list-group -->
 
 				</div> <!-- tab-pane liens-utiles -->		
 				

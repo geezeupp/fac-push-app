@@ -116,6 +116,21 @@ function subscribeOrUnsubscribeFromChannel(Id,channel){
 function buildCorrectButton(data,channel){
 	
 	var button='<input type="button" class="btn btn-success" value="inscription" onClick="subscribeToChannel(\''+channel+'\')" />';
+	var txt = '';
+	switch (channel) {
+	case "Associations":
+		txt = '<h4>Inscrivez-vous à la rubrique "Association" pour recevoir des notifications associées aux animations associatives de l université de Bordeaux.Pour cela, il suffit d appuyer sur le bouton "S inscrire". </h4>';
+		break;
+	case "Sport":
+		txt = '<h4>Inscrivez-vous à la rubrique "Sport" pour recevoir des notifications associées aux activités sportives de l université de Bordeaux.Pour cela, il suffit d appuyer sur le bouton "S inscrire". </h4>';
+		break;
+	case "RU":
+		txt = '<h4>Inscrivez-vous à la rubrique "Restaurant Universitaire" pour recevoir des notifications associées aux menus proposés par les "resto U" et cafétariats de l université de Bordeaux.Pour cela, il suffit d appuyer sur le bouton "S inscrire". </h4>';
+		break;
+	case "Administration":
+		txt = '<h4>Inscrivez-vous à la rubrique "Administration" pour recevoir des notifications associées au domaine administratif (emploi du temps, résultats examens) de l université de Bordeaux.Pour cela, il suffit d appuyer sur le bouton "S inscrire". </h4>';
+		break;
+	}
 	if(data.channels != undefined){
 		var channelsArray = data.channels;
 		for (var i = 0; i < channelsArray.length; i++) {
@@ -123,11 +138,28 @@ function buildCorrectButton(data,channel){
 		    	
 		    	button='<input type="button" class="btn btn-danger" value="desinscription" onClick="unsubscribeFromChannel(\''+channel+'\')" />';
 		    	
-		    	  break;
+		    	switch (channel) {
+		    	case "Associations":
+		    		txt = '<h4>Vous avez la possibilité de vous désinscrire de la rubrique "Association" en appuyant sur le bouton "Se désinscrire".</h4>';
+		    		break;
+		    	case "Sport":
+		    		txt = '<h4>Vous avez la possibilité de vous désinscrire de la rubrique "Sport" en appuyant sur le bouton "Se désinscrire".</h4>';
+		    		break;
+		    	case "RU":
+		    		txt = '<h4>Vous avez la possibilité de vous désinscrire de la rubrique "Restaurant Universitaire" en appuyant sur le bouton "Se désinscrire".</h4>';
+		    		break;
+		    	case "Administration":
+		    		txt = '<h4>Vous avez la possibilité de vous désinscrire de la rubrique "Administration" en appuyant sur le bouton "Se désinscrire".</h4>';
+		    		break;
+		    	}
+		    	
+		    	break;
 		    }
 		}
 	}
-		
+	$("#txt-parametre").empty();
+	$("#txt-parametre").append(txt);
+	$("#txt-parametre").show();	
 	
 	$("#btn-parametre").empty();
 	$("#btn-parametre").append(button);
