@@ -89,7 +89,7 @@ function buildFullMessage(data){
 		var message = '<div class="panel-heading">';
 		message+= '<h5 class = panel-Title>'+data.results[i].title+'</h5></div> ';
 		message+='<div class="panel-body">'+data.results[i].message +'</div>';
-		message+='<div class = panel-footer><center><strong>'+data.results[i].channel+'</strong></center></div></div>';		
+		message+='<div class = panel-footer><center><strong>'+data.results[i].updatedAt.substring(0,10)+' - '+data.results[i].updatedAt.substring(11,19)+'</strong></center></div></div>';		
 		$("#full-message").append(message);
 	}
 	$('#full-message').show();
