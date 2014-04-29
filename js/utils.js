@@ -117,6 +117,10 @@
     	Android.unsubscribeFromChannel(channel);
     }
     
+    function goToPhoneSettings() {
+    	Android.goToPhoneSettings();
+    }
+    
     
     
     
