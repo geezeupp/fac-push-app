@@ -39,7 +39,7 @@
 
  
     $(document).ready(function(){ 
-    	//Naviguation entre les diff�rents onglets
+    	//Naviguation entre les différents onglets
         $('a').click(function (e) {
         	e.preventDefault();
         	$(this).tab('show');	    	
@@ -50,7 +50,7 @@
     	});
     	
     	$("#retour").click(function () {
-    		//retour vers la rubrique d'o� l'on vient
+    		//retour vers la rubrique d'où l'on vient
     	    document.location.href = "javascript:history.go(-1)";
     	});
     	
@@ -121,8 +121,35 @@
     	Android.goToPhoneSettings();
     }
     
-    
-    
+    function buildNavigationHeader(channel){
+    	
+    	var test =  '<p>hello!!</p>';
+    	
+    	var header = '<div class="panel-heading">';
+    	header+= '<div class="container">';
+    	header+= '<div class="navbar-header">';
+    	header+= '<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">';
+    	header+= '<span class="sr-only">Toggle navigation</span>';
+    	header+= '<span class="icon-bar"></span>';
+    	header+= '<span class="icon-bar"></span>';
+    	header+= '<span class="icon-bar"></span>';
+    	header+= '</button>';
+    	header+= '<a class="navbar-brand" href="#">'+channel+'</a>';
+    	header+= '</div>';
+    	header+= '<div class="navbar-collapse collapse" style="height: 1px;">';
+    	header+= '<ul class="nav navbar-nav">';
+    	header+= '<li><a href="‪#‎about‬">Associations</a></li>';
+    	header+= '<li><a href="‪#‎contact‬">Sports</a></li>';
+    	header+= '<li><a href="‪#‎about‬">RU</a></li>';
+    	header+= '<li><a href="‪#‎contact‬">Administration</a></li>';
+    	header+= '</ul>';
+    	header+= '</div>';
+    	header+= '</div>';    
+    	
+    	//$("#navHeader").empty();
+    	$("#navHeader").append(test);
+    	//$("#navHeader").show();	
+    }
     
 	 
 	

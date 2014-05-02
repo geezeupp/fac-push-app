@@ -14,9 +14,9 @@
 	<link href="css/empty.css" rel="stylesheet">
 	
 	<!-- Jquery Mobile -->  
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+    <!--  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" /> -->
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+    <!--  <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script> -->
     <script src="libs/jquery/jquery-1.11.0.min.js"></script>   
     
     <script src="libs/bootstrap/js/bootstrap.min.js"></script>
@@ -28,16 +28,24 @@
      
    	 getAllNotificationsForChannel('Associations');
      subscribeOrUnsubscribeFromChannel(getParameterValue('uid'),'Associations');
+     buildNavigationHeader('Associations');
     </script> 
  </head>
   
  	<body> 	
- 	
+ 	<!--  
  	<div id ="entete" data-role="header" data-position="inline" data-theme="f">
  			<center><img src="images/associations.png" height=45px width=45px/></center>
 			<a id="accueil" data-icon="grid" class="ui-btn-left" data-theme="c">Accueil</a>
-	</div> <!-- header -->
- 	   
+	</div> <!-- header 
+	-->
+	
+	<!-- Fixed navbar -->
+	<div id="navHeader" class="navbar navbar-default navbar-fixed-top" data-role="navigation">
+	
+	</div>	
+	
+ 	   <br><br><br>
 	    <div class="container">
 	    
 			<div id="menu-navbar">

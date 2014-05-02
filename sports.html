@@ -28,14 +28,24 @@
      
    	 getAllNotificationsForChannel('Sport');
      subscribeOrUnsubscribeFromChannel(getParameterValue('uid'),'Sport');
+     buildNavigationHeader('Sport');
     </script> 
  </head>
   
- 	<body> 	  
+ 	<body> 	 
+ 	<!--  
  	   <div id ="entete" data-role="header" data-position="inline" data-theme="f">
  			<center><img src="images/sports.png" height=45px width=45px/></center>
 			<a id="accueil" data-icon="grid" class="ui-btn-left" data-theme="c">Accueil</a>
-	  </div> <!-- header -->
+	  </div> <!-- header 
+	  -->
+	  
+	  <!-- Fixed navbar -->
+	<div id="navHeader" class="navbar navbar-default navbar-fixed-top" data-role="navigation">
+	
+	</div>	
+	  
+	  <br><br><br>
 	    <div class="container">
 	    
 			<div id="menu-navbar">
