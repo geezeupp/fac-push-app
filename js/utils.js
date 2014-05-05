@@ -36,6 +36,9 @@
 		return link;
 	}
 	
+	function sortByDate(x,y) {
+		return ((x.createdAt == y.createdAt) ? 0 : ((x.createdAt < y.createdAt) ? 1 : -1 ));
+		}
 
  
     $(document).ready(function(){ 
@@ -123,8 +126,7 @@
     
     function buildNavigationHeader(channel){
   
-    	var header = '<div class="panel-heading">';
-    	header+= '<div class="container">';
+    	var header = '<div class="container">';
     	header+= '<div class="navbar-header">';
     	header+= '<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">';
     	header+= '<span class="sr-only">Toggle navigation</span>';
@@ -132,20 +134,19 @@
     	header+= '<span class="icon-bar"></span>';
     	header+= '<span class="icon-bar"></span>';
     	header+= '</button>';
-    	header+= '<a class="navbar-brand" href="#">'+channel+'</a>';
+    	header+= '<a class="navbar-brand">'+channel+'</a>';
     	header+= '</div>';
     	header+= '<div class="navbar-collapse collapse" style="height: 1px;">';
     	header+= '<ul class="nav navbar-nav">';
-    	header+= '<li><a href="‪#‎about‬">Associations</a></li>';
-    	header+= '<li><a href="‪#‎contact‬">Sports</a></li>';
-    	header+= '<li><a href="‪#‎about‬">RU</a></li>';
-    	header+= '<li><a href="‪#‎contact‬">Administration</a></li>';
+    	header+= '<li><a onclick="return getLink(\'index.html\',\'uid\')">Accueil</a></li>';
+    	header+= '<li><a onclick="return getLink(\'associations.html\',\'uid\')">Associations</a></li>';
+    	header+= '<li><a onclick="return getLink(\'sports.html\',\'uid\')">Sports</a></li>';
+    	header+= '<li><a onclick="return getLink(\'ru.html\',\'uid\')">RU</a></li>';
+    	header+= '<li><a onclick="return getLink(\'administration.html\',\'uid\')">Administration</a></li>';
     	header+= '</ul>';
     	header+= '</div>';
     	header+= '</div>'; 
-    	
-    	
-    	//document.getElementById('navHeader').innerHTML = header;
+    
     	
     	$("#navHeader").empty();
     	$("#navHeader").append(header);

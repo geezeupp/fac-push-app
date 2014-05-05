@@ -39,7 +39,7 @@ function getAllNotificationsForChannel(channel){
 	    dataType: "json",
 		headers:headers,
 		success: function (data, status, jqXHR) {
-			
+			data.results.sort(sortByDate);
 			buildNotificationList(data);        
 		},
 			 
@@ -79,6 +79,30 @@ function getFullMessage(objectID){
 				}
 		 });
 
+}
+
+
+function getChannelByMessageId(objectID){
+	var channel = "";
+	$.ajax({
+		type: "GET",
+		url: 'https://api.parse.com/1/classes/push?where={"objectId":"'+objectID+'"}',
+		contentType: "application/json; charset=utf-8",
+	    dataType: "json",
+		headers:headers,
+		success: function (data, status, jqXHR) {
+			channel = data.results.channel;
+			if(channel == 'RU'){
+				channel = 'Restaurant Universitaire';
+			}
+		},
+			 
+		error: function (jqXHR, status) {            
+				alert('error');	 
+				}
+		 });
+	
+	return channel;
 }
 
 function buildFullMessage(data){
