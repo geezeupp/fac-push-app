@@ -122,9 +122,7 @@
     }
     
     function buildNavigationHeader(channel){
-    	
-    	var test =  '<p>hello!!</p>';
-    	
+  
     	var header = '<div class="panel-heading">';
     	header+= '<div class="container">';
     	header+= '<div class="navbar-header">';
@@ -144,11 +142,14 @@
     	header+= '<li><a href="‪#‎contact‬">Administration</a></li>';
     	header+= '</ul>';
     	header+= '</div>';
-    	header+= '</div>';    
+    	header+= '</div>'; 
     	
-    	//$("#navHeader").empty();
-    	$("#navHeader").append(test);
-    	//$("#navHeader").show();	
+    	
+    	//document.getElementById('navHeader').innerHTML = header;
+    	
+    	$("#navHeader").empty();
+    	$("#navHeader").append(header);
+    	$("#navHeader").show();	
     }
     
 	 
