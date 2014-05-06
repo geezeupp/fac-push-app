@@ -1,10 +1,18 @@
-#footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-}
-
 div#entete{
 	margin-top: 20px;
 }
 
+div#accueil{
+	text-align: center;
+}
+
+div#index{
+	text-align: center;
+	background-color: #5F8CA3;
+}
+
+div#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
