@@ -29,7 +29,9 @@ function sendPush(){
 		
 }
 
-
+/*
+ * Retreive all notifications for the specified channel
+ */
 function getAllNotificationsForChannel(channel){
 	
 	$.ajax({
@@ -62,6 +64,10 @@ function buildNotificationList(data){
 	$('#list-push').show();
 }
 
+
+/*
+ * Retreive full message for the message id
+ */
 function getFullMessage(objectID){
 	$.ajax({
 		type: "GET",
@@ -81,7 +87,9 @@ function getFullMessage(objectID){
 
 }
 
-
+/*
+ * Get the channel from the message id
+ */
 function getChannelByMessageId(objectID){
 	var channel = "";
 	$.ajax({
@@ -105,6 +113,9 @@ function getChannelByMessageId(objectID){
 	return channel;
 }
 
+/*
+ * Build the full message 
+ */
 function buildFullMessage(data){
 	
 	$("#full-message").empty();
@@ -112,13 +123,17 @@ function buildFullMessage(data){
 	for(var i in data.results){
 		var message = '<div class="panel-heading">';
 		message+= '<h5 class = panel-Title>'+data.results[i].title+'</h5></div> ';
-		message+='<div class="panel-body">'+data.results[i].message +'</div>';
+		message+='<div id="news" class="panel-body">'+data.results[i].message +'</div>';
 		message+='<div class = panel-footer><center>'+'Envoy\351 le '+data.results[i].updatedAt.substring(0,10)+' \340 '+data.results[i].updatedAt.substring(11,19)+'</center></div></div>';		
 		$("#full-message").append(message);
 	}
 	$('#full-message').show();
 }
 
+/*
+ * Subscribe or unsubscribe user from channel : if user has registered for the channel
+ * he/she will be uregistered and vice-versa 
+ */
 function subscribeOrUnsubscribeFromChannel(Id,channel){
 	$.ajax({
 		type: "GET",
@@ -137,6 +152,9 @@ function subscribeOrUnsubscribeFromChannel(Id,channel){
 	
 }
 
+/*
+ * Build the correct button according to users registration 
+ */
 function buildCorrectButton(data,channel){
 	
 	var button='<input type="button" class="btn btn-success" value="inscription" onClick="subscribeToChannel(\''+channel+'\')" />';

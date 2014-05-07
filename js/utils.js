@@ -1,4 +1,7 @@
-	function extractUrlParams() {
+/*
+ * Extraire les parametres du lien 
+ */	
+ function extractUrlParams() {
 		var urlParams = location.search.substring(1).split('&');
 		var tabParams = [];
 		for ( var i = 0; i < urlParams.length; i++) {
@@ -8,7 +11,10 @@
 		return tabParams;
 
 	}
-	
+
+ /*
+  * Recuperer la valeur d'un parametre  
+  */
 	function getParameterValue(name) {
 		var tabParams = extractUrlParams();
 		var value = "All"; 
@@ -19,11 +25,17 @@
 
 	}
 	
+	/*
+	 * Ajouter un parametre à un lien et naviguer vers ce lien
+	 */
 	function getLink(page,parameterName) {
 		var link = page + '?'+parameterName+'='+getParameterValue(parameterName);
 		document.location.href = link;
 	}
 	
+	/*
+	 * Construire le lien de la page: ajout de parametres
+	 */
 	function addParameter(page,parameterName,value){
 		var link = page;
 		
@@ -36,10 +48,16 @@
 		return link;
 	}
 	
+	/*
+	 * Trier le tableau de reponse par date
+	 */
 	function sortByDate(x,y) {
 		return ((x.createdAt == y.createdAt) ? 0 : ((x.createdAt < y.createdAt) ? 1 : -1 ));
 		}
 
+	/*
+	 * fonctions jquery pour la navigation. 
+	 */
  
     $(document).ready(function(){ 
     	//Naviguation entre les diffÃ©rents onglets
@@ -104,9 +122,17 @@
     		    	
     });
     
+    /*
+     * Aller à la page en parametre
+     */
     function goToPage(page){
     	document.location.href = "."+page;
     }
+    
+   /********************************************************************
+    * Fonctions Javascripts pour l'interface Android
+    * Communication webApp - Application native Android
+    **********************************************************************/
     
     function showAndroidToast(toast) {
     	Android.showToast(toast);
@@ -124,6 +150,10 @@
     	Android.goToPhoneSettings();
     }
     
+    
+    /*
+     * Construction de la navbar de l'application avec les sous menus
+     */
     function buildNavigationHeader(channel){
   
     	var header = '<div class="container">';
