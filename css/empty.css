@@ -15,3 +15,11 @@ div#footer {
 	bottom: 0;
 	width: 100%;
 }
+
+div#txt-parametre {
+	text-align : justify;
+}
+
+div#btn-parametre{
+	text-align : center;
+}

@@ -161,16 +161,16 @@ function buildCorrectButton(data,channel){
 	var txt = '';
 	switch (channel) {
 	case "Associations":
-		txt = '<h4>Inscrivez-vous \340 la rubrique "Association" pour recevoir des notifications associ\351es aux animations associatives de l universit\351 de Bordeaux.Pour cela, il suffit d appuyer sur le bouton "inscription". </h4>';
+		txt = '<h4>Inscrivez-vous \340 la rubrique "Association" pour recevoir des notifications associ\351es aux animations associatives de l\'universit\351 de Bordeaux. Pour cela, il suffit d\'appuyer sur le bouton "inscription". </h4>';
 		break;
 	case "Sport":
-		txt = '<h4>Inscrivez-vous \340 la rubrique "Sport" pour recevoir des notifications associ\351es aux activit\351s sportives de l universit\351 de Bordeaux.Pour cela, il suffit d appuyer sur le bouton "inscription". </h4>';
+		txt = '<h4>Inscrivez-vous \340 la rubrique "Sport" pour recevoir des notifications associ\351es aux activit\351s sportives de l\'universit\351 de Bordeaux. Pour cela, il suffit d\'appuyer sur le bouton "inscription". </h4>';
 		break;
 	case "RU":
-		txt = '<h4>Inscrivez-vous \340 la rubrique "Restaurant Universitaire" pour recevoir des notifications associ\351es aux menus propos\351s par les "resto U" et caf\351tariats de l universit\351 de Bordeaux.Pour cela, il suffit d appuyer sur le bouton "inscription". </h4>';
+		txt = '<h4>Inscrivez-vous \340 la rubrique "Restaurant Universitaire" pour recevoir des notifications associ\351es aux menus propos\351s par les "resto U" et caf\351tariats de l\'universit\351 de Bordeaux. Pour cela, il suffit d\'appuyer sur le bouton "inscription". </h4>';
 		break;
 	case "Administration":
-		txt = '<h4>Inscrivez-vous \340 la rubrique "Administration" pour recevoir des notifications associ\351es au domaine administratif (emploi du temps, résultats examens) de l universit\351 de Bordeaux.Pour cela, il suffit d appuyer sur le bouton "inscription". </h4>';
+		txt = '<h4>Inscrivez-vous \340 la rubrique "Administration" pour recevoir des notifications associ\351es au domaine administratif (emploi du temps, r\351sultats examens) de l\'universit\351 de Bordeaux. Pour cela, il suffit d\'appuyer sur le bouton "inscription". </h4>';
 		break;
 	}
 	if(data.channels != undefined){
